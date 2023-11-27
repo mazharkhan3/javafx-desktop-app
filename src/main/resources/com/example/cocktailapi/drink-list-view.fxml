@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.cocktailapi.controllers.DrinksListController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <VBox spacing="10" alignment="TOP_CENTER" styleClass="card">
+        <ImageView fx:id="imageView" fitWidth="100" preserveRatio="true"/>
+        <Label fx:id="titleLabel" text="Drink Name"/>
+        <Label fx:id="tagLabel" text="Tags"/>
+        <Label fx:id="categoryLabel" text="Category"/>
+        <Label fx:id="instructionLabel" text="Instructions" wrapText="true"/>
+        <!-- You can add hidden fields or more labels as needed -->
+    </VBox>
+
+</AnchorPane>

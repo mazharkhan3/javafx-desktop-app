@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.text.Text?>
+<VBox alignment="CENTER" prefHeight="434.0" prefWidth="366.0" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="com.example.cocktailapi.controllers.SearchController">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <HBox alignment="CENTER" spacing="10">
+        <TextField fx:id="searchField" promptText="Enter query..."/>
+        <Button fx:id="searchButton" onAction="#onSearchButtonClick" text="Search"/>
+    </HBox>
+
+    <VBox fx:id="drinksContainer" spacing="10" alignment="TOP_CENTER">
+        <!-- Cards will be added here -->
+    </VBox>
+</VBox>
