@@ -1,0 +1,15 @@
+.drink-card {
+    -fx-padding: 10;
+    -fx-alignment: center-left;
+    -fx-border-color: #ced4da;
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 5;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 5, 0, 0, 5);
+}
+
+.drink-title {
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+}

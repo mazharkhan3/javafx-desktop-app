@@ -6,6 +6,8 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
+import java.util.Objects;
+
 public class DrinksListController {
     @FXML private ImageView imageView;
     @FXML private Label titleLabel;
@@ -14,11 +16,19 @@ public class DrinksListController {
     @FXML private Label instructionLabel;
 
     public void setData(DrinkModel drink) {
-        titleLabel.setText(drink.getStrDrink());
-        tagLabel.setText(drink.getStrTags());
-        categoryLabel.setText(drink.getStrCategory());
-        instructionLabel.setText(drink.getStrInstructions());
-        Image image = new Image(drink.getStrDrinkThumb(), true); // true for background loading
+
+        var title = drink.getStrDrink() != null ? drink.getStrDrink() : "N/A";
+        var tags = drink.getStrTags() != null ? "Tags: " + drink.getStrTags() : "Tags: N/A";
+        var category = drink.getStrCategory() != null ? "Category: " + drink.getStrCategory() : "Category: N/A";
+        var instructions = drink.getStrInstructions() != null ? drink.getStrInstructions() : "N/A";
+        var cocktailImage = drink.getStrDrinkThumb();
+
+        titleLabel.setText(title);
+        tagLabel.setText(tags);
+        categoryLabel.setText(category);
+        instructionLabel.setText(instructions);
+
+        Image image = new Image(cocktailImage, true); // true for background loading
         imageView.setImage(image);
     }
 }
