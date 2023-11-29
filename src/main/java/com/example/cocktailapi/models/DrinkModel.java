@@ -4,6 +4,10 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 public class DrinkModel {
+    @Override
+    public String toString() {
+        return strDrink;
+    }
 
     @SerializedName("idDrink")
     @Expose
