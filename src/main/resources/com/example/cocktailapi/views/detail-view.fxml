@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.text.Text?>
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cocktailapi.controllers.DetailController" spacing="10">
+    <ImageView fx:id="drinkImageView" fitWidth="300" fitHeight="300" preserveRatio="true"/>
+    <Text fx:id="titleLabel"/>
+    <Text fx:id="instructionLabel"/>
+    <Text fx:id="categoryLabel"/>
+    <Text fx:id="tagLabel"/>
+    <Button text="Back" onAction="#onBackButtonClick"/>
+</VBox>

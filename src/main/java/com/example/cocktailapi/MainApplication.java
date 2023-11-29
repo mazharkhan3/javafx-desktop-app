@@ -1,5 +1,6 @@
 package com.example.cocktailapi;
 
+import com.example.cocktailapi.constants.FilePath;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -12,7 +13,7 @@ import java.util.Objects;
 public class MainApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("search-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource(FilePath.SEARCH_VIEW));
         Scene scene = new Scene(fxmlLoader.load(), 800, 600);
         stage.setTitle("Search Cocktails!");
         stage.setScene(scene);

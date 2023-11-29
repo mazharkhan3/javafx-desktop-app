@@ -1,6 +1,7 @@
 package com.example.cocktailapi.controllers;
 
 import com.example.cocktailapi.MainApplication;
+import com.example.cocktailapi.constants.FilePath;
 import com.example.cocktailapi.helpers.ApiClient;
 import com.example.cocktailapi.models.CocktailListModel;
 import com.example.cocktailapi.models.DrinkModel;
@@ -11,6 +12,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.ProgressIndicator;
@@ -27,8 +29,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SearchController {
-    private CocktailService cocktailService = new CocktailService();
+    private final CocktailService cocktailService = new CocktailService();
 
+    public VBox mainContainer;
     public TextField searchField;
     public Button searchButton;
     public ProgressIndicator progressIndicator;
@@ -89,5 +92,20 @@ public class SearchController {
     }
 
     public void onDetailsButtonClick(ActionEvent event) {
+        // Assuming drinksListView is your ListView
+        DrinkModel selectedDrink = drinksListView.getSelectionModel().getSelectedItem();
+        if (selectedDrink != null) {
+            try {
+                FXMLLoader loader = new FXMLLoader(MainApplication.class.getResource(FilePath.DETAIL_VIEW));
+                Parent detailView = loader.load();
+                DetailController controller = loader.getController();
+                controller.setDrink(selectedDrink);
+
+                mainContainer.getChildren().setAll(detailView); // Replace the content of the root element
+            } catch (IOException e) {
+                e.printStackTrace();
+                // Handle exceptions
+            }
+        }
     }
 }

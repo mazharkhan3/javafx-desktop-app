@@ -13,9 +13,9 @@
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.control.ListView?>
-<VBox stylesheets="@styles/search-view.css" alignment="CENTER" prefHeight="600.0" prefWidth="800.0" spacing="20.0"
+<VBox stylesheets="@../styles/search-view.css" alignment="CENTER" prefHeight="600.0" prefWidth="800.0" spacing="20.0"
       xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21"
-      fx:controller="com.example.cocktailapi.controllers.SearchController" styleClass="background">
+      fx:controller="com.example.cocktailapi.controllers.SearchController" styleClass="background" fx:id="mainContainer">
     <padding>
         <Insets top="20" right="20" bottom="20" left="20"/>
     </padding>
