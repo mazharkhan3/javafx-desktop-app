@@ -30,8 +30,8 @@ public class DetailController {
         drinkImageView.setImage(new Image(drink.getStrDrinkThumb()));
         titleLabel.setText(drink.getStrDrink());
         instructionLabel.setText(drink.getStrInstructions());
-        categoryLabel.setText(drink.getStrCategory());
-        tagLabel.setText(drink.getStrTags());
+        categoryLabel.setText(drink.getStrCategory() != null ? "Category: " + drink.getStrCategory() : "Category: N/A");
+        tagLabel.setText(drink.getStrTags() != null ? "Tags: " + drink.getStrTags() : "Tags: N/A");
     }
 
     @FXML

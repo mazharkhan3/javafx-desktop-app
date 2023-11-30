@@ -5,11 +5,14 @@
 
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.text.Text?>
-<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cocktailapi.controllers.DetailController" spacing="10">
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cocktailapi.controllers.DetailController" spacing="10" stylesheets="@../styles/detail-view.css">
     <ImageView fx:id="drinkImageView" fitWidth="300" fitHeight="300" preserveRatio="true"/>
-    <Text fx:id="titleLabel"/>
-    <Text fx:id="instructionLabel"/>
-    <Text fx:id="categoryLabel"/>
-    <Text fx:id="tagLabel"/>
-    <Button text="Back" onAction="#onBackButtonClick"/>
+    <Text fx:id="titleLabel" styleClass="title-text"/>
+    <ScrollPane fitToWidth="true" maxHeight="200">
+        <Text text="Instructions: "/>
+        <Text fx:id="instructionLabel" styleClass="instruction-text" wrappingWidth="600"/>
+    </ScrollPane>
+    <Text fx:id="categoryLabel" styleClass="category-text"/>
+    <Text fx:id="tagLabel" styleClass="tag-text"/>
+    <Button text="Back" onAction="#onBackButtonClick" styleClass="back-button"/>
 </VBox>

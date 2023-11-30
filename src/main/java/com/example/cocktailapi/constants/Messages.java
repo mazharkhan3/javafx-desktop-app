@@ -6,6 +6,6 @@ public class Messages {
 
     // OTHER MESSAGES
     public static final String NO_DRINKS_AVAILABLE = "No drinks available against the searched query";
-    public static final String NO_DRINK_SELECTED = "Search and select a drink to show the drink image";
+    public static final String NO_DRINK_SELECTED = "Search and select a drink to go to the detail page";
 
 }
