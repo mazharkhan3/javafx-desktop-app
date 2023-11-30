@@ -1,6 +1,6 @@
 package com.example.cocktailapi.services;
 
-import com.example.cocktailapi.helpers.ApiClient;
+import com.example.cocktailapi.util.ApiClient;
 import com.example.cocktailapi.models.CocktailListModel;
 import com.google.gson.Gson;
 

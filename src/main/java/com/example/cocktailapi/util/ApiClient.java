@@ -1,4 +1,4 @@
-package com.example.cocktailapi.helpers;
+package com.example.cocktailapi.util;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

@@ -7,7 +7,6 @@
 <?import javafx.scene.layout.VBox?>
 
 <?import javafx.scene.text.Text?>
-<?import javafx.scene.control.ScrollPane?>
 
 <?import javafx.scene.control.ProgressIndicator?>
 <?import javafx.scene.control.SplitPane?>
@@ -15,40 +14,37 @@
 <?import javafx.scene.control.ListView?>
 <VBox stylesheets="@../styles/search-view.css" alignment="CENTER" prefHeight="600.0" prefWidth="800.0" spacing="20.0"
       xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21"
-      fx:controller="com.example.cocktailapi.controllers.SearchController" styleClass="background" fx:id="mainContainer">
+      fx:controller="com.example.cocktailapi.controllers.SearchController" styleClass="background"
+      fx:id="mainContainer">
     <padding>
         <Insets top="20" right="20" bottom="20" left="20"/>
     </padding>
 
     <HBox alignment="TOP_CENTER" spacing="10">
-        <Text text="Search Cocktails" styleClass="title-text"/>
+        <Text text="SEARCH COCKTAILS" styleClass="title-text"/>
     </HBox>
 
     <SplitPane dividerPositions="0.5" prefHeight="800.0" prefWidth="600.0">
         <VBox spacing="10">
             <HBox>
                 <TextField fx:id="searchField" promptText="Enter query..." styleClass="text-field"/>
-                <Button fx:id="searchButton" onAction="#onSearchButtonClick" text="Search" styleClass="search-button"/>
+            </HBox>
+            <HBox>
+                <Button onAction="#onSearchButtonClick" text="Search" styleClass="search-button"/>
             </HBox>
             <HBox>
                 <HBox alignment="CENTER">
-                    <Text fx:id="noDrinksMessage" visible="false"/>
+                    <Text fx:id="errorMessage" visible="false" styleClass="error-message"/>
                 </HBox>
             </HBox>
-<!--            <HBox>-->
-<!--                <ScrollPane fitToWidth="true" fitToHeight="true">-->
-<!--                    <VBox fx:id="drinksContainer" spacing="10" alignment="TOP_CENTER" styleClass="card-container"-->
-<!--                          style="-fx-padding: 20;">-->
-<!--                        <Text text="Search any cocktail drink to show results"/>-->
-<!--                    </VBox>-->
-<!--                </ScrollPane>-->
-<!--            </HBox>-->
-            <ProgressIndicator fx:id="progressIndicator" visible="false"/>
-            <ListView fx:id="drinksListView"/>
+
+            <ProgressIndicator fx:id="progressIndicator" visible="false"
+                               prefWidth="500" prefHeight="500" styleClass="progress-indicator" />
+            <ListView fx:id="drinksListView" styleClass="list-view"/>
         </VBox>
         <VBox spacing="10" alignment="TOP_CENTER">
-            <ImageView fx:id="selectedDrinkImage" fitWidth="200" fitHeight="200" preserveRatio="true"/>
-            <Button text="Details" fx:id="detailsButton" onAction="#onDetailsButtonClick"/>
+            <ImageView fx:id="selectedDrinkImage" fitWidth="400" fitHeight="400" preserveRatio="true"/>
+            <Button text="Details" onAction="#onDetailsButtonClick" styleClass="detail-button"/>
         </VBox>
     </SplitPane>
 </VBox>
